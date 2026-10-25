@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ของดี ไม่ทิ้ง | แบ่งปันสิ่งของในชุมชน</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- แถบเมนูด้านบน -->
+    <header class="navbar">
+        <a href="#home" class="logo">♻ ของดี ไม่ทิ้ง</a>
+
+        <nav>
+            <a href="#home">หน้าแรก</a>
+            <a href="#items">สิ่งของทั้งหมด</a>
+            <a href="#about">เกี่ยวกับเรา</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ส่วนต้อนรับ -->
+        <section class="hero" id="home">
+            <p class="tagline">SHARE MORE, WASTE LESS</p>
+
+            <h1>
+                ของที่ไม่ใช้<br>
+                อาจมีค่าสำหรับใครอีกคน
+            </h1>
+
+            <p class="hero-text">
+                ส่งต่อสิ่งของที่ยังมีประโยชน์
+                สร้างสังคมแห่งการแบ่งปันและลดขยะไปด้วยกัน
+            </p>
+
+            <a href="#items" class="button">ค้นหาสิ่งของ</a>
+        </section>
+
+        <!-- รายการสิ่งของตัวอย่าง -->
+        <section class="items-section" id="items">
+            <div class="section-heading">
+                <p class="tagline">COMMUNITY SHARING</p>
+                <h2>สิ่งของที่กำลังแบ่งปัน</h2>
+                <p>ลองเลือกดูสิ่งของที่อาจเป็นประโยชน์กับคุณ</p>
+            </div>
+
+            <div class="item-grid">
+
+                <article class="item-card">
+                    <div class="item-icon">📚</div>
+                    <h3>หนังสือมือสอง</h3>
+                    <p>หนังสือสภาพดี พร้อมส่งต่อให้คนรักการอ่าน</p>
+                    <span class="category">หนังสือ</span>
+                </article>
+
+                <article class="item-card">
+                    <div class="item-icon">👕</div>
+                    <h3>เสื้อผ้า</h3>
+                    <p>เสื้อผ้าที่ยังใส่ได้ ให้คนอื่นนำไปใช้ต่อ</p>
+                    <span class="category">เสื้อผ้า</span>
+                </article>
+
+                <article class="item-card">
+                    <div class="item-icon">🪴</div>
+                    <h3>กระถางต้นไม้</h3>
+                    <p>กระถางเหลือใช้ เหมาะสำหรับปลูกต้นไม้ต้นใหม่</p>
+                    <span class="category">ของใช้ในบ้าน</span>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- เกี่ยวกับโครงการ -->
+        <section class="about-section" id="about">
+            <h2>แบ่งปันวันนี้ เพื่อวันพรุ่งนี้ที่ดีกว่า</h2>
+            <p>
+                โครงการของดี ไม่ทิ้ง สนับสนุนการนำสิ่งของที่ยังใช้งานได้
+                กลับมาใช้ซ้ำ ลดการสร้างขยะ และส่งเสริมการช่วยเหลือกันในชุมชน
+            </p>
+        </section>
+    </main>
+
+    
+
+<section class="form-section" id="post">
+    <div class="section-heading">
+        <p class="tagline">SHARE YOUR ITEMS</p>
+        <h2>ลงประกาศแบ่งปันสิ่งของ</h2>
+        <p>กรอกข้อมูลสิ่งของและช่องทางติดต่อของคุณ</p>
+    </div>
+
+    <form id="item-form">
+        <label for="item-name">ชื่อสิ่งของ</label>
+        <input
+            type="text"
+            id="item-name"
+            placeholder="เช่น หนังสือเรียน"
+            maxlength="80"
+            required
+        >
+
+        <label for="item-category">หมวดหมู่</label>
+        <select id="item-category" required>
+            <option value="">เลือกหมวดหมู่</option>
+            <option value="หนังสือ">หนังสือ</option>
+            <option value="เสื้อผ้า">เสื้อผ้า</option>
+            <option value="ของใช้ในบ้าน">ของใช้ในบ้าน</option>
+            <option value="อื่น ๆ">อื่น ๆ</option>
+        </select>
+
+        <label for="item-description">รายละเอียดสิ่งของ</label>
+        <textarea
+            id="item-description"
+            rows="3"
+            maxlength="300"
+            placeholder="เช่น สภาพดี ใช้งานได้ตามปกติ"
+            required
+        ></textarea>
+
+        <label for="seller-name">ชื่อผู้ลงประกาศ</label>
+        <input
+            type="text"
+            id="seller-name"
+            placeholder="ชื่อที่ต้องการให้แสดง"
+            maxlength="60"
+            required
+        >
+
+        <label for="seller-phone">เบอร์ติดต่อ</label>
+        <input
+            type="tel"
+            id="seller-phone"
+            placeholder="กรอกเบอร์ติดต่อ"
+            maxlength="20"
+            required
+        >
+
+        <button type="submit" class="button">
+            ลงประกาศแบ่งปัน
+        </button>
+
+        <p id="form-message" role="status" aria-live="polite"></p>
+    </form>
+</section>
+
+
+    <footer>
+        <p>© 2026 ของดี ไม่ทิ้ง | แพลตฟอร์มแลกเปลี่ยนสิ่งของชุมชน</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
